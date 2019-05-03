@@ -19,7 +19,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder> {
 
     Context mContext;
-    List<Item> itemList = new ArrayList<>();
+    List<Item> itemList;
 
     public ItemAdapter(Context mContext, List<Item> itemList) {
         this.mContext = mContext;
@@ -39,7 +39,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
         itemViewHolder.imgItem.setImageResource(item.getItemImageName());
         itemViewHolder.tvName.setText(item.getItemName());
-        itemViewHolder.tvPrice.setText(item.getItemPrice());
+        itemViewHolder.tvPrice.setText(Integer.toString(item.getItemPrice()));
 
     }
 

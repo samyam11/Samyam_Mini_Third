@@ -27,7 +27,6 @@ public class DashboardActivity extends AppCompatActivity {
         itemList.add(new Item("White",500,R.drawable.ic_launcher_foreground,"White Shirt."));
 
 
-
       ItemAdapter itemAdapter = new ItemAdapter(DashboardActivity.this, itemList);
       recyclerView.setAdapter(itemAdapter);
       recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
