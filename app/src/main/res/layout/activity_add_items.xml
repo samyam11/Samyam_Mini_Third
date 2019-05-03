@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddItemsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Items"
+        android:gravity="center"
+        android:textStyle="italic|bold"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        />
+    <EditText
+        android:id="@+id/etItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:hint="Item Name"
+        android:inputType="text"
+        android:layout_weight="1"
+        />
+    <EditText
+        android:id="@+id/etItemPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:hint="Item Price"
+        android:inputType="number"
+        android:layout_weight="1"
+        />
+    <EditText
+        android:id="@+id/etItemImageName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:hint="Item Image Name"
+        android:inputType="text"
+        android:layout_weight="1"
+        />
+    <EditText
+        android:id="@+id/etItemDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:hint="Item Description"
+        android:gravity="top"
+        android:inputType="text"
+        android:layout_weight="8"
+        />
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:textStyle="italic|bold"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        />
+    </LinearLayout>
+
+</ScrollView>
