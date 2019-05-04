@@ -80,7 +80,6 @@ public class RegisterFragment extends Fragment {
            etPassword.setText("");
            etConfirmPassword.setText("");
             Toast.makeText(getContext(), "Successfully Registered", Toast.LENGTH_LONG).show();
-            Intent loginIntent = new Intent(getActivity(),LoginFragment.class);
 
 
 
