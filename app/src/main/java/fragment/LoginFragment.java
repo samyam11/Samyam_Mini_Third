@@ -68,6 +68,8 @@ public class LoginFragment extends Fragment {
             startActivity(intent);
         }
         else {
+            etUsername.setText("");
+            etPassword.setText("");
             Toast.makeText(getContext(),"Incorrect Credentials.",Toast.LENGTH_LONG).show();
 
         }
