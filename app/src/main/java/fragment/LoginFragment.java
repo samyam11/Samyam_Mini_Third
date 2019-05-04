@@ -57,7 +57,7 @@ public class LoginFragment extends Fragment {
                 }
                 if (TextUtils.isEmpty(etPassword.getText())){
                   etPassword.setError("Field Cannot be Empty.");
-                  getActivity().finish();
+
                   return;
                 }
                 Login();
