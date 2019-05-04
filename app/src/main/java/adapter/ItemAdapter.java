@@ -7,6 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import com.example.ushan_mini_third.DescriptionActivity;
@@ -18,15 +20,18 @@ import model.Item;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder> {
+public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder>{
 
     Context mContext;
     List<Item> itemList;
+
 
     public ItemAdapter(Context mContext, List<Item> itemList) {
         this.mContext = mContext;
         this.itemList = itemList;
     }
+
+
 
     public class ItemViewHolder extends RecyclerView.ViewHolder{
 
@@ -75,6 +80,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     public int getItemCount() {
         return itemList.size();
     }
+
+
 
 
 }

@@ -77,7 +77,7 @@ public class LoginFragment extends Fragment {
 
 
 
-        if(Username.equals(etUsername.getText().toString()) && Password.equals(etPassword.getText().toString())){
+        if(Username.equals(etUsername.getText().toString().toLowerCase()) && Password.equals(etPassword.getText().toString())){
             Intent intent = new Intent(getContext(), AfterLoginActivity.class);
             startActivity(intent);
             getActivity().finish();

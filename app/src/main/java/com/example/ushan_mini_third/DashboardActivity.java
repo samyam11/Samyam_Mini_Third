@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
+
 import adapter.ItemAdapter;
 import model.Item;
 
@@ -29,7 +31,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         readFromFile();
 
-        ItemAdapter itemAdapter = new ItemAdapter(getApplicationContext(), itemValue);
+        final ItemAdapter itemAdapter = new ItemAdapter(getApplicationContext(), itemValue);
         recyclerView.setAdapter(itemAdapter);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 

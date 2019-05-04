@@ -73,7 +73,7 @@ public class RegisterFragment extends Fragment {
            SharedPreferences sharedPreferences = getContext().getSharedPreferences("User",MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
 
-            editor.putString("username", etUsername.getText().toString());
+            editor.putString("username", etUsername.getText().toString().toLowerCase());
             editor.putString("password", etPassword.getText().toString());
             editor.commit();
             etUsername.setText("");
