@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,8 @@ import android.widget.Toast;
 
 import com.example.ushan_mini_third.AfterLoginActivity;
 import com.example.ushan_mini_third.R;
+
+import org.w3c.dom.Text;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -48,6 +51,15 @@ public class LoginFragment extends Fragment {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (TextUtils.isEmpty(etUsername.getText())){
+                  etUsername.setError("Field Cannot be Empty.");
+                  return;
+                }
+                if (TextUtils.isEmpty(etPassword.getText())){
+                  etPassword.setError("Field Cannot be Empty.");
+                  getActivity().finish();
+                  return;
+                }
                 Login();
             }
         });
@@ -62,6 +74,8 @@ public class LoginFragment extends Fragment {
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("User", Context.MODE_PRIVATE);
         String Username =sharedPreferences.getString("username","");
         String Password =sharedPreferences.getString("password","");
+
+
 
         if(Username.equals(etUsername.getText().toString()) && Password.equals(etPassword.getText().toString())){
             Intent intent = new Intent(getContext(), AfterLoginActivity.class);

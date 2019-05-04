@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,6 +47,20 @@ public class RegisterFragment extends Fragment {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (TextUtils.isEmpty(etUsername.getText())){
+                    etUsername.setError("Field Cannot be Empty.");
+                    return;
+
+                }
+                if (TextUtils.isEmpty(etPassword.getText())){
+                    etPassword.setError("Field Cannot be Empty.");
+                    return;
+                }
+                if (TextUtils.isEmpty(etConfirmPassword.getText())){
+                    etConfirmPassword.setError("Field Cannot be Empty.");
+                    return;
+
+                }
                 Register();
             }
         });

@@ -2,6 +2,7 @@ package com.example.ushan_mini_third;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +30,23 @@ public class AddItemsActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (TextUtils.isEmpty(etItemName.getText())){
+                    etItemName.setError("Field Cannot Be Empty.");
+                    return;
+                }
+                if (TextUtils.isEmpty(etItemImageName.getText())){
+                    etItemImageName.setError("Field Cannot Be Empty.");
+                    return;
+                }
+                if (TextUtils.isEmpty(etItemPrice.getText())){
+                    etItemPrice.setError("Field Cannot Be Empty.");
+                    return;
+                }
+                if (TextUtils.isEmpty(etItemDescription.getText())){
+                    etItemDescription.setError("Field Cannot Be Empty.");
+                    return;
+                }
                 addItem();
 
             }

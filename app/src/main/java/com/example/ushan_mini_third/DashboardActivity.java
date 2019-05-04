@@ -18,7 +18,7 @@ import java.util.List;
 public class DashboardActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private List<Item> itemValue = new ArrayList<>();;
+    private List<Item> itemValue = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +27,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
 
-
-
         readFromFile();
-
 
         ItemAdapter itemAdapter = new ItemAdapter(getApplicationContext(), itemValue);
         recyclerView.setAdapter(itemAdapter);
