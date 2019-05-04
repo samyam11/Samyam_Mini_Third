@@ -12,12 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabTextColor="#ffffff"
-        app:tabIndicatorColor="#ffffff"
+        app:tabIndicatorColor="#000000"
         android:background="#1E88e5"
                 />
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
-        android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>

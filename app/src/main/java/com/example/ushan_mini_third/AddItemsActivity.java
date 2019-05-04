@@ -41,6 +41,10 @@ public class AddItemsActivity extends AppCompatActivity {
             printStream.println(etItemName.getText().toString() + "->"+etItemPrice.getText().toString()
                     + "->"+etItemImageName.getText().toString()+"->"+etItemDescription.getText().toString());
             Toast.makeText(this, "saved to"+getFilesDir(), Toast.LENGTH_SHORT).show();
+            etItemName.setText("");
+            etItemPrice.setText("");
+            etItemDescription.setText("");
+            etItemImageName.setText("");
         } catch (IOException e) {
             Log.d("Item Add","error:"+e.toString());
             e.printStackTrace();

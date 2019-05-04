@@ -34,7 +34,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         ItemAdapter itemAdapter = new ItemAdapter(getApplicationContext(), itemValue);
         recyclerView.setAdapter(itemAdapter);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 
     }
 

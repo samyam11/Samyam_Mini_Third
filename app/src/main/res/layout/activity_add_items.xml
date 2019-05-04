@@ -4,75 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddItemsActivity">
+    tools:context=".AddItemsActivity"
+    android:background="@drawable/background">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        >
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Items"
-        android:gravity="center"
-        android:textStyle="italic|bold"
-        android:textSize="20sp"
         android:layout_margin="10dp"
-        android:layout_weight="1"
-        />
+        >
+
+        <TextView
+            android:textStyle="italic|bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Items"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:textSize="30sp"
+            android:textColor="#ffffff"/>
     <EditText
         android:id="@+id/etItemName1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:layout_margin="10dp"
+        android:layout_margin="20dp"
+        android:textColor="#ffffff"
         android:hint="Item Name"
         android:inputType="text"
         android:layout_weight="1"
+        android:textStyle="italic"
         />
     <EditText
         android:id="@+id/etItemPrice1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:layout_margin="10dp"
+        android:layout_margin="20dp"
+        android:textColor="#ffffff"
         android:hint="Item Price"
         android:inputType="number"
         android:layout_weight="1"
+        android:textStyle="italic"
         />
     <EditText
         android:id="@+id/etItemImageName1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:layout_margin="10dp"
+        android:layout_margin="20dp"
+        android:textColor="#ffffff"
         android:hint="Item Image Name"
         android:inputType="text"
         android:layout_weight="1"
+        android:textStyle="italic"
         />
     <EditText
         android:id="@+id/etItemDescription1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:layout_margin="10dp"
+        android:layout_margin="20dp"
+        android:textColor="#ffffff"
         android:hint="Item Description"
         android:gravity="top"
         android:inputType="text"
         android:layout_weight="8"
+        android:textStyle="italic"
         />
-    <Button
-        android:id="@+id/btnAdd1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        android:textStyle="italic|bold"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:layout_weight="1"
-        android:layout_margin="10dp"
-        />
+
+        <Button
+            android:id="@+id/btnAdd1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textColor="#ffffff"
+            android:layout_weight="1"
+            android:background="@drawable/button_round"
+            android:gravity="center"
+            android:text="Add"
+            android:textSize="20sp"
+            android:textStyle="italic|bold" />
     </LinearLayout>
 
 </ScrollView>

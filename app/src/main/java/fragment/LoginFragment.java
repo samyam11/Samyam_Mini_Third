@@ -66,8 +66,10 @@ public class LoginFragment extends Fragment {
         if(Username.equals(etUsername.getText().toString()) && Password.equals(etPassword.getText().toString())){
             Intent intent = new Intent(getContext(), AfterLoginActivity.class);
             startActivity(intent);
+            getActivity().finish();
         }
         else {
+            etUsername.hasFocus();
             etUsername.setText("");
             etPassword.setText("");
             Toast.makeText(getContext(),"Incorrect Credentials.",Toast.LENGTH_LONG).show();

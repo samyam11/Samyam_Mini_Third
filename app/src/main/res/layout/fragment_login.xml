@@ -2,14 +2,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fragment.LoginFragment">
+    tools:context="fragment.LoginFragment"
+    android:background="@drawable/background"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login Form"
+        android:layout_gravity="center"
+
+        android:textSize="30sp"
+        android:textStyle="italic|bold"
         android:layout_margin="20dp"
-        >
+        android:textColor="#ffffff"
+        />
+
 
     <TextView
         android:layout_width="match_parent"
@@ -17,7 +29,8 @@
         android:text="Username :"
         android:textSize="20sp"
         android:textStyle="italic|bold"
-        android:layout_margin="10dp"
+        android:layout_margin="20dp"
+        android:textColor="#ffffff"
         />
 
     <EditText
@@ -26,6 +39,10 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         android:textSize="20sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#ffffff"
 
         />
     <TextView
@@ -34,7 +51,9 @@
         android:text="Password :"
         android:textSize="20sp"
         android:textStyle="italic|bold"
-        android:layout_margin="10dp"
+
+        android:layout_margin="20dp"
+        android:textColor="#ffffff"
         />
 
     <EditText
@@ -43,6 +62,10 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:textSize="20sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#ffffff"
 
         />
 
@@ -52,11 +75,13 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:textStyle="italic|bold"
-        android:layout_margin="10dp"
+
+        android:layout_margin="20dp"
+        android:textColor="#ffffff"
         android:padding="10dp"
         android:layout_gravity="center"
+        android:background="@drawable/button_round"
         />
-
-
     </LinearLayout>
+
 </ScrollView>
