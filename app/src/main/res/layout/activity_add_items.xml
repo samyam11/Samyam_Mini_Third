@@ -22,7 +22,7 @@
         android:layout_weight="1"
         />
     <EditText
-        android:id="@+id/etItemName"
+        android:id="@+id/etItemName1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -32,7 +32,7 @@
         android:layout_weight="1"
         />
     <EditText
-        android:id="@+id/etItemPrice"
+        android:id="@+id/etItemPrice1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -42,7 +42,7 @@
         android:layout_weight="1"
         />
     <EditText
-        android:id="@+id/etItemImageName"
+        android:id="@+id/etItemImageName1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -52,7 +52,7 @@
         android:layout_weight="1"
         />
     <EditText
-        android:id="@+id/etItemDescription"
+        android:id="@+id/etItemDescription1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -63,7 +63,7 @@
         android:layout_weight="8"
         />
     <Button
-        android:id="@+id/btnAdd"
+        android:id="@+id/btnAdd1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add"

@@ -6,8 +6,6 @@ public class Item {
     private int ItemImageName;
     private String ItemDescription;
 
-
-
     public Item(String itemName, int itemPrice, int itemImageName, String itemDescription) {
         ItemName = itemName;
         ItemPrice = itemPrice;

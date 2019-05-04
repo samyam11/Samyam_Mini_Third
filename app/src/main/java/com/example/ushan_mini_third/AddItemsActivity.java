@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintStream;
 
 public class AddItemsActivity extends AppCompatActivity {
@@ -19,36 +20,31 @@ public class AddItemsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_items);
 
-        etItemName = findViewById(R.id.etItemName);
-        etItemPrice = findViewById(R.id.etItemPrice);
-        etItemImageName = findViewById(R.id.etItemImageName);
-        etItemDescription = findViewById(R.id.etItemDescription);
-        btnAdd = findViewById(R.id.btnAdd);
+        etItemName = findViewById(R.id.etItemName1);
+        etItemPrice = findViewById(R.id.etItemPrice1);
+        etItemImageName = findViewById(R.id.etItemImageName1);
+        etItemDescription = findViewById(R.id.etItemDescription1);
+        btnAdd = findViewById(R.id.btnAdd1);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Save();
+                addItem();
 
             }
         });
     }
 
-    private void Save(){
+    public void addItem() {
         try {
-            PrintStream printStream = new PrintStream(openFileOutput("text.txt",MODE_PRIVATE|MODE_APPEND));
-            printStream.println(etItemName.getText().toString()+"->"+etItemPrice.getText().toString()+"->"
-                    +etItemImageName.getText().toString()+"->"+etItemDescription.getText().toString());
-            etItemName.setText("");
-            etItemPrice.setText("");
-            etItemImageName.setText("");
-            etItemDescription.setText("");
-
-            Toast.makeText(AddItemsActivity.this, "Saved to" +getFilesDir(),Toast.LENGTH_LONG).show();
-
-        } catch (FileNotFoundException e) {
-            Log.d("Item Add","Error"+e.toString());
+            PrintStream printStream=new PrintStream(openFileOutput("items.txt",MODE_PRIVATE |MODE_APPEND));
+            printStream.println(etItemName.getText().toString() + "->"+etItemPrice.getText().toString()
+                    + "->"+etItemImageName.getText().toString()+"->"+etItemDescription.getText().toString());
+            Toast.makeText(this, "saved to"+getFilesDir(), Toast.LENGTH_SHORT).show();
+        } catch (IOException e) {
+            Log.d("Item Add","error:"+e.toString());
             e.printStackTrace();
         }
     }
+
 }

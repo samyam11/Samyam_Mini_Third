@@ -1,6 +1,7 @@
 package adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.ushan_mini_third.DescriptionActivity;
 import com.example.ushan_mini_third.R;
 
 import java.util.ArrayList;
@@ -26,6 +28,19 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         this.itemList = itemList;
     }
 
+    public class ItemViewHolder extends RecyclerView.ViewHolder{
+
+        CircleImageView imgItem;
+        TextView tvName, tvPrice;
+        public ItemViewHolder(@NonNull View itemView) {
+            super(itemView);
+            imgItem = itemView.findViewById(R.id.imgItem);
+            tvName = itemView.findViewById(R.id.itemName);
+            tvPrice = itemView.findViewById(R.id.itemPrice);
+
+        }
+    }
+
     @NonNull
     @Override
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -35,12 +50,25 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder itemViewHolder, int i) {
-        Item item = itemList.get(i);
+        final Item item = itemList.get(i);
 
         itemViewHolder.imgItem.setImageResource(item.getItemImageName());
         itemViewHolder.tvName.setText(item.getItemName());
         itemViewHolder.tvPrice.setText(Integer.toString(item.getItemPrice()));
 
+        itemViewHolder.imgItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent descriptionIntent = new Intent(mContext, DescriptionActivity.class);
+                descriptionIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                descriptionIntent.putExtra("name", item.getItemName());
+                descriptionIntent.putExtra("price", item.getItemPrice());
+                descriptionIntent.putExtra("description", item.getItemDescription());
+                descriptionIntent.putExtra("image", item.getItemImageName());
+
+                mContext.startActivity(descriptionIntent);
+            }
+        });
     }
 
     @Override
@@ -48,16 +76,5 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         return itemList.size();
     }
 
-    public class ItemViewHolder extends RecyclerView.ViewHolder{
 
-        CircleImageView imgItem;
-        TextView tvName, tvPrice;
-        public ItemViewHolder(@NonNull View itemView) {
-            super(itemView);
-            imgItem = itemView.findViewById(R.id.imgItem);
-            tvName = itemView.findViewById(R.id.tvName);
-            tvPrice = itemView.findViewById(R.id.tvPrice);
-
-        }
-    }
 }
